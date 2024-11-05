@@ -1,0 +1,52 @@
+/* Estilos gerais do carrinho */
+.cart-container {
+    max-width: 600px; /* Largura máxima para centralizar o conteúdo */
+    margin: 20px auto; /* Centraliza o componente no meio da página */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #ffffff; /* Fundo branco para clareza */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+}
+
+/* Título do carrinho */
+.cart-container h2 {
+    font-size: 2em; /* Tamanho da fonte do título */
+    color: #4a90e2; /* Cor azul clara para o título */
+    margin-bottom: 20px; /* Margem inferior para espaçamento */
+    text-align: center; /* Alinhamento central do título */
+}
+
+/* Estilo da lista de itens */
+.cart-container ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove espaçamento interno da lista */
+}
+
+/* Estilo de cada item da lista */
+.cart-container li {
+    padding: 15px; /* Espaçamento interno para cada item */
+    border: 1px solid #e1e1e1; /* Borda suave para separar os itens */
+    border-radius: 4px; /* Bordas arredondadas para os itens */
+    margin-bottom: 10px; /* Margem inferior entre os itens */
+    transition: box-shadow 0.3s; /* Transição suave para efeito hover */
+}
+
+/* Efeito de hover para os itens */
+.cart-container li:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais profunda ao passar o mouse */
+}
+
+/* Estilo do subtotal */
+.cart-container h3 {
+    font-size: 1.5em; /* Tamanho da fonte do subtotal */
+    color: #333; /* Cor do texto do subtotal */
+    margin-top: 20px; /* Margem superior para espaçamento */
+    text-align: center; /* Alinhamento central do subtotal */
+}
+
+/* Mensagem quando o carrinho está vazio */
+.cart-container p {
+    text-align: center; /* Alinhamento central da mensagem */
+    font-size: 1.2em; /* Tamanho da fonte da mensagem */
+    color: #999; /* Cor do texto para mensagem de carrinho vazio */
+}

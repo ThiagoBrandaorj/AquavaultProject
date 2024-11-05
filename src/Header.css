@@ -1,27 +1,67 @@
+/* Estilo do Header */
 header {
-    background-color: #282c34;
-    color: white;
-    padding: 20px;
-    text-align:left;
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Gradiente de fundo mais escuro para profundidade */
+    color: white; /* Cor do texto */
+    padding: 30px; /* Aumenta o espaçamento interno */
+    text-align: center; /* Alinhamento central */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5); /* Sombra mais profunda para destaque */
+    position: relative; /* Para o efeito de antes */
+    overflow: hidden; /* Esconde partes que saem da borda */
+    border-bottom: 4px solid #007acc; /* Borda inferior para um toque de segurança */
 }
 
+/* Efeito de antes no Header */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); /* Sobreposição sutil */
+    z-index: 0; /* Coloca atrás do conteúdo */
+    pointer-events: none; /* Ignora eventos do mouse */
+    transition: background 0.3s ease; /* Transição suave para efeito hover */
+}
+
+/* Efeito de hover na header */
+header:hover::before {
+    background: rgba(0, 0, 0, 0.4); /* Escurece a sobreposição ao passar o mouse */
+}
+
+/* Estilo da Navegação */
 nav {
-    margin: 20px 0;
+    margin: 20px 0; /* Margem superior e inferior */
+    display: flex; /* Alinhamento em linha */
+    justify-content: center; /* Centraliza os links na navegação */
+    gap: 25px; /* Aumenta o espaço entre os links */
+    z-index: 1; /* Mantém a navegação acima do efeito de antes */
 }
 
+/* Estilo dos Links */
 nav a {
-    color: #61dafb;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-    transition: color 0.3s;
+    color: #61dafb; /* Cor padrão do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 12px 18px; /* Aumenta o espaçamento interno dos links */
+    border-radius: 6px; /* Bordas arredondadas */
+    position: relative; /* Para o efeito de antes */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Transições suaves */
 }
 
+/* Efeito de Hover nos Links */
 nav a:hover {
-    color: #21a1f1;
+    background-color: rgba(97, 218, 251, 0.4); /* Cor de fundo no hover */
+    color: #21a1f1; /* Cor do texto no hover */
+    transform: translateY(-3px); /* Levanta o link ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Sombra ao passar o mouse */
 }
 
+/* Estilo do Título */
 h1 {
-    font-size: 2.5em;
-    margin: 0;
+    font-size: 3em; /* Tamanho da fonte do título maior para destaque */
+    margin: 0; /* Remove margens padrão */
+    font-weight: bold; /* Deixa o título em negrito */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Sombra no texto mais pronunciada */
+    letter-spacing: 1px; /* Espaçamento entre letras para um toque sofisticado */
 }

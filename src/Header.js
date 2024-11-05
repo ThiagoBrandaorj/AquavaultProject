@@ -5,7 +5,7 @@ import './Header.css';
 function Header() {
     return (
         <header>
-            <h1>Loja de Lockboxes</h1>
+            <h1>Aquavault Store</h1>
             <nav>
                 <Link to="/">Início</Link>
                 <Link to="/cart">Carrinho</Link>

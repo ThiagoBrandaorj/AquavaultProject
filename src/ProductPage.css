@@ -1,63 +1,100 @@
+/* Definições de fonte globais */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Fonte moderna e limpa */
+    background-color: #eaeaea; /* Fundo claro para contraste */
+}
+
+/* Estilos da página do produto */
 .product-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    background-color: #ffffff; /* Fundo branco para um visual limpo */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave para destaque */
+    padding: 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%); /* Gradiente suave de fundo */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25); /* Sombra profunda para destaque */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves para efeito de hover */
+    border: 2px solid #007acc; /* Borda sólida para reforçar a segurança */
+}
+
+.product-page:hover {
+    transform: translateY(-5px); /* Eleva a página ao passar o mouse */
+    box-shadow: 0 12px 60px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
 }
 
 .product-page img {
-    max-width: 300px;
-    border-radius: 8px;
-    margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+    max-width: 400px; /* Largura máxima da imagem */
+    border-radius: 12px; /* Bordas arredondadas para a imagem */
+    margin-bottom: 25px; /* Espaço entre a imagem e o texto */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); /* Sombra suave na imagem */
+    transition: transform 0.3s ease; /* Transição suave para o zoom da imagem */
+}
+
+.product-page img:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
 }
 
 .product-page h2 {
-    color: #4a90e2; /* Azul claro para o título */
-    margin: 10px 0; /* Margem para espaçamento */
+    color: #2c3e50; /* Azul escuro para o título */
+    margin: 15px 0; /* Margem para espaçamento */
+    font-weight: 700; /* Negrito para o título */
+    text-transform: uppercase; /* Letras maiúsculas para um toque elegante */
+    letter-spacing: 1px; /* Espaçamento entre letras para sofisticação */
 }
 
 .product-page p {
-    color: #666; /* Cor do texto descritivo em um tom mais claro */
+    color: #555; /* Cor do texto descritivo em um tom mais escuro */
     text-align: center; /* Centraliza o texto */
+    font-size: 1.1em; /* Tamanho de fonte levemente aumentado */
 }
 
 .product-page .price {
-    font-size: 1.5em; /* Tamanho maior para o preço */
-    color: #007acc; /* Azul mais intenso para o preço */
-    margin: 10px 0; /* Margem para espaçamento */
+    font-size: 2em; /* Tamanho maior para o preço */
+    color: #007acc; /* Azul intenso para o preço */
+    margin: 20px 0; /* Margem para espaçamento */
     font-weight: bold; /* Negrito para destaque */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15); /* Sombra suave para o preço */
 }
 
 .product-page label {
     margin-top: 10px; /* Espaço acima do label */
     margin-bottom: 20px; /* Espaço abaixo do label */
     color: #333; /* Cor do label */
+    font-weight: 600; /* Peso da fonte um pouco mais pesado */
 }
 
 .product-page input[type="number"] {
     margin-left: 10px; /* Espaço entre o label e o input */
-    width: 50px; /* Largura fixa para o input */
-    padding: 5px; /* Espaçamento interno */
-    border: 1px solid #4a90e2; /* Borda azul clara */
-    border-radius: 4px; /* Bordas arredondadas */
+    width: 70px; /* Largura ajustada para melhor aparência */
+    padding: 10px; /* Aumenta o espaçamento interno */
+    border: 2px solid #007acc; /* Borda azul intensa */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave para foco */
+}
+
+.product-page input[type="number"]:focus {
+    outline: none; /* Remove o contorno padrão */
+    border-color: #005f8c; /* Muda a cor da borda ao focar */
+    box-shadow: 0 0 5px rgba(0, 95, 140, 0.5); /* Sombra suave ao focar */
 }
 
 .product-page button {
-    background-color: #4a90e2; /* Azul claro para o botão */
+    background-color: #005f8c; /* Azul escuro para o botão */
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Aumenta o padding para um botão mais confortável */
     border: none;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s; /* Transição suave */
-    font-size: 16px; /* Tamanho de fonte ajustado */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+    font-size: 18px; /* Tamanho de fonte ajustado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave no botão */
 }
 
 .product-page button:hover {
-    background-color: #007acc; /* Azul mais escuro ao passar o mouse */
+    background-color: #007acc; /* Azul claro ao passar o mouse */
+    transform: translateY(-2px); /* Levanta o botão ao passar o mouse */
 }
 
 /* Estilos para o seletor de imagens */
@@ -67,18 +104,19 @@
 }
 
 .image-selector button {
-    background-color: #4a90e2; /* Cor do botão */
+    background-color: #005f8c; /* Cor do botão */
     color: white;
     border: none;
-    border-radius: 4px;
-    padding: 5px 10px;
+    border-radius: 5px;
+    padding: 8px 12px; /* Ajusta o padding para um toque mais confortável */
     margin: 0 5px; /* Margem lateral para espaçamento entre botões */
     cursor: pointer;
-    transition: background-color 0.3s; /* Transição suave */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
 }
 
 .image-selector button:hover {
     background-color: #007acc; /* Cor ao passar o mouse */
+    transform: translateY(-2px); /* Levanta o botão ao passar o mouse */
 }
 
 .image-selector button.active {

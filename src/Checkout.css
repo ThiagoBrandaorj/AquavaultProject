@@ -1,0 +1,60 @@
+/* Checkout.css */
+
+.checkout-container {
+    max-width: 600px; /* Largura máxima para centralizar o conteúdo */
+    margin: 20px auto; /* Margem superior e inferior para centralizar */
+    padding: 20px; /* Espaçamento interno */
+    border: 1px solid #d1d5db; /* Borda suave */
+    border-radius: 10px; /* Bordas arredondadas para um toque mais suave */
+    background-color: #ffffff; /* Fundo branco para clareza */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+/* Estilo dos rótulos */
+.checkout-label {
+    display: block; /* Exibe os rótulos em bloco */
+    margin-bottom: 5px; /* Espaço inferior */
+    font-weight: bold; /* Negrito para destaque */
+    color: #333; /* Cor escura para boa legibilidade */
+}
+
+/* Estilo dos campos de entrada */
+.checkout-input {
+    width: 100%; /* Largura total do campo */
+    padding: 12px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: border-color 0.3s; /* Transição suave para a borda */
+}
+
+/* Efeito de foco nos campos de entrada */
+.checkout-input:focus {
+    border-color: #28a745; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Sombra ao focar */
+}
+
+/* Estilo do botão de checkout */
+.checkout-button {
+    padding: 12px 20px; /* Espaçamento interno do botão */
+    background-color: #28a745; /* Verde padrão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove bordas padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+    font-size: 1em; /* Tamanho da fonte do botão */
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+}
+
+/* Efeito de hover no botão */
+.checkout-button:hover {
+    background-color: #218838; /* Verde mais escuro ao passar o mouse */
+    transform: translateY(-2px); /* Leve elevação ao passar o mouse */
+}
+
+/* Efeito de foco no botão */
+.checkout-button:focus {
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Sombra ao focar */
+}
