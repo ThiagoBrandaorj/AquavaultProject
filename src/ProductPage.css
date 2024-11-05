@@ -1,0 +1,86 @@
+.product-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco para um visual limpo */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave para destaque */
+}
+
+.product-page img {
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.product-page h2 {
+    color: #4a90e2; /* Azul claro para o título */
+    margin: 10px 0; /* Margem para espaçamento */
+}
+
+.product-page p {
+    color: #666; /* Cor do texto descritivo em um tom mais claro */
+    text-align: center; /* Centraliza o texto */
+}
+
+.product-page .price {
+    font-size: 1.5em; /* Tamanho maior para o preço */
+    color: #007acc; /* Azul mais intenso para o preço */
+    margin: 10px 0; /* Margem para espaçamento */
+    font-weight: bold; /* Negrito para destaque */
+}
+
+.product-page label {
+    margin-top: 10px; /* Espaço acima do label */
+    margin-bottom: 20px; /* Espaço abaixo do label */
+    color: #333; /* Cor do label */
+}
+
+.product-page input[type="number"] {
+    margin-left: 10px; /* Espaço entre o label e o input */
+    width: 50px; /* Largura fixa para o input */
+    padding: 5px; /* Espaçamento interno */
+    border: 1px solid #4a90e2; /* Borda azul clara */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+.product-page button {
+    background-color: #4a90e2; /* Azul claro para o botão */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s; /* Transição suave */
+    font-size: 16px; /* Tamanho de fonte ajustado */
+}
+
+.product-page button:hover {
+    background-color: #007acc; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Estilos para o seletor de imagens */
+.image-selector {
+    margin-top: 20px; /* Espaçamento acima do seletor de imagem */
+    display: flex; /* Exibe os botões em linha */
+}
+
+.image-selector button {
+    background-color: #4a90e2; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 0 5px; /* Margem lateral para espaçamento entre botões */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.image-selector button:hover {
+    background-color: #007acc; /* Cor ao passar o mouse */
+}
+
+.image-selector button.active {
+    background-color: #007acc; /* Cor diferente para o botão ativo */
+}
