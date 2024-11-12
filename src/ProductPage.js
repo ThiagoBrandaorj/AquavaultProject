@@ -22,7 +22,7 @@ function ProductPage() {
         const item = {
             id: currentImageIndex, // Identificador do produto (ou use um ID específico)
             name: "Lockbox Seguro",
-            price: 225.00,
+            price: 167.00,
             quantity: quantity
         };
         addToCart(item);
