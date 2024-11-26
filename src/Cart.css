@@ -50,3 +50,37 @@
     font-size: 1.2em; /* Tamanho da fonte da mensagem */
     color: #999; /* Cor do texto para mensagem de carrinho vazio */
 }
+
+/* Adiciona transições ao remover itens */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cart-item.removing {
+    opacity: 0; /* Gradualmente torna o item invisível */
+    transform: translateX(-20px); /* Move o item para fora */
+}
+
+/* Botão de remoção */
+.remove-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff4d4d;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+    background-color: #d63636;
+}
+
+.remove-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}

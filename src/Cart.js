@@ -1,12 +1,20 @@
-import React from 'react';
-import { useCart } from './CartContext'; // Importa o hook do contexto do carrinho
-import './Cart.css'; // Importa o arquivo CSS
+import React, { useState } from 'react';
+import { useCart } from './CartContext';
+import './Cart.css';
 
 function Cart() {
-    const { cartItems } = useCart();
+    const { cartItems, setCartItems } = useCart();
+    const [isRemoving, setIsRemoving] = useState(false);
 
-    // Calcula o subtotal
-    const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    const removeItem = (index) => {
+        if (isRemoving) return; // Prevenir múltiplas remoções simultâneas
+        setIsRemoving(true);
+
+        setTimeout(() => {
+            setCartItems((prevItems) => prevItems.filter((_, i) => i !== index));
+            setIsRemoving(false);
+        }, 300);
+    };
 
     return (
         <div className="cart-container">
@@ -18,11 +26,30 @@ function Cart() {
                     <ul>
                         {cartItems.map((item, index) => (
                             <li key={index}>
-                                {item.name} - R${item.price.toFixed(2)} (Quantidade: {item.quantity})
+                                <div className="cart-item">
+                                    <span>
+                                        {item.name} - Quantidade: {item.quantity} - R$
+                                        {(item.price * item.quantity).toFixed(2)}
+                                    </span>
+                                    <button
+                                        className="remove-button"
+                                        onClick={() => {
+                                            if (window.confirm('Tem certeza que deseja remover este item?')) {
+                                                removeItem(index);
+                                            }
+                                        }}
+                                        disabled={isRemoving}
+                                    >
+                                        Remover
+                                    </button>
+                                </div>
                             </li>
                         ))}
                     </ul>
-                    <h3>Subtotal: R${subtotal.toFixed(2)}</h3>
+                    <h3>
+                        Subtotal: R$
+                        {cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}
+                    </h3>
                 </>
             )}
         </div>

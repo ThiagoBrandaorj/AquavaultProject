@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './ProductPage.css'; // Importa o arquivo CSS
+import './ProductPage.css';
 import productImage1 from './aquavault.jpg';
 import productImage2 from './aquavault_2.jpg';
 import productImage3 from './aquavault_3.jpg';
 import productImage4 from './aquavault_4.jpg';
-import { useCart } from './CartContext'; // Importa o hook do contexto do carrinho
+import { useCart } from './CartContext';
 
 const images = [
     productImage1,
@@ -14,16 +14,16 @@ const images = [
 ];
 
 function ProductPage() {
-    const { addToCart } = useCart(); // Acessa a função de adicionar ao carrinho
+    const { addToCart } = useCart();
     const [quantity, setQuantity] = useState(1);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const handleAddToCart = () => {
         const item = {
-            id: currentImageIndex, // Identificador do produto (ou use um ID específico)
+            id: currentImageIndex,
             name: "Lockbox Seguro",
             price: 167.00,
-            quantity: quantity
+            quantity: Number(quantity), // Garante que a quantidade seja numérica
         };
         addToCart(item);
         alert(`Produto adicionado ao carrinho! Quantidade: ${quantity}`);
