@@ -38,7 +38,7 @@ function ProductPage() {
             <img src={images[currentImageIndex]} alt="Lockbox seguro" />
             <h2>Lockbox Seguro</h2>
             <p>Descrição: Uma caixa forte e segura para armazenar itens de valor.</p>
-            <p className="price">Preço: R$225,00</p>
+            <p className="price">Preço: R$167,00</p>
             <label>
                 Quantidade:
                 <input 
